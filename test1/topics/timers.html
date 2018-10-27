@@ -1,0 +1,59 @@
+<html>
+<head>
+    <style>
+        p {
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var timerID;
+
+        function timerFired() {
+            alert("timer fired");
+        }
+
+        function startTimer() {
+            timerID = setTimeout(timerFired, 10000);
+            alert("timer started");
+        }
+
+        function stopTimer() {
+            clearTimeout(timerID);
+            alert("timer stopped");
+        }
+
+        var counterID;
+        var counter = 0;
+
+        function counterFired() {
+            var pElement = document.getElementById("counter");
+            counter++;
+            pElement.textContent = String(counter);
+        }
+
+        function startCounter() {
+            counterID = setInterval(counterFired, 1000);
+            counter = 0;
+            alert("counter started");
+        }
+
+        function stopCounter() {
+            clearInterval(counterID);
+            alert("counter stopped");
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Start timer" onclick="startTimer()"/>
+    <input type="button" value="Stop timer" onclick="stopTimer()"/>
+    <br>
+    <input type="button" value="Start Counter" onclick="startCounter()"/>
+    <input type="button" value="Stop Counter" onclick="stopCounter()"/>
+
+    <p id="counter">0</p>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	"use strict"
+
+// function CoffeeMachine(power) {
+
+
+//   this.waterAmount = 0;
+//   var WATER_HEAT_CAPACITY = 4200;
+
+//   // var getBoilTime = function() {
+//   //   console.log('getBoilTime is called!');
+//   //   return this.waterAmount;
+//   // }.bind(this);
+
+//   var self = this;
+
+//   // function getBoilTime() {
+//   //   console.log('getBoilTime is called!');
+//   //   return this.waterAmount;
+//   // };
+
+//   function getBoilTime() {
+//     console.log('getBoilTime is called!');
+//     return self.waterAmount;
+//   };
+
+
+//   function onReady() {
+//     alert( 'Coffee is done!' );
+//     console.log('Coffee is done!');
+//   }
+
+//   this.run = function() {
+//      setTimeout(onReady, getBoilTime());
+//      //console.log(getBoilTime());
+//   };
+
+// }
+
+// // создаю кофеварку, мощностью 100000W чтобы кипятила быстро
+// var coffeeMachine = new CoffeeMachine(10);
+// coffeeMachine.waterAmount = 2000;
+
+// coffeeMachine.run();
+
+var num = 5;
+
+var type = typeof num;
+
+alert(typeof type);
+
+
+function User(name) {
+	this.name = name;
+}
+
+var user = new User("Eugene");
+alert(typeof user);
+
+var myFunc = function User1(name) {
+	console.log('hello');
+}
+
+alert(typeof myFunc);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head onload="console.log('head load')">
+    <title>Testing Forms</title>
+    <script type="text/javascript" onload="console.log('script onload')">
+
+    function showPrompt() {
+        var result = prompt("Enter something", "Default text");
+        console.log(result + " " + typeof result);
+    }
+    
+    function showConfirm() {
+        var result = confirm("Do you confirm?");
+        console.log(result + " " + typeof result);
+    }
+
+    var student = new Object();
+    student.name = "Eugene";
+
+    console.log(student.name);
+
+    </script>
+</head>
+<body onload="console.log('body onload')">
+    <form name="form1">
+        <input type="text" id="textFieldId" name="textField1" placeholder="Some text" onload="console.log('input log')" /><br>
+        <input type="image" src="../images/avatar.png" onload="console.log('image loaded')" width="50dp" height="50dp" />
+        <input type="button" value="Some button" onclick="showConfirm()"/><br>
+        <input type="submit" value="Some submit"/>
+    </form>
+    <img src="../images/avatar.png" width="50dp" height="50dp" onload="console.log('img loaded')"/>
+
+</body>
+</html>

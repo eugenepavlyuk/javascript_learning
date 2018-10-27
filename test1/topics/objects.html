@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+    var someObject = {};
+    someObject.firstname = "Name";
+    someObject.lastname = "Pavlyuk";
+
+    console.log(someObject.firstname);
+    console.log(someObject.lastname);
+
+    var otherObject = new Object();
+    console.log(otherObject.firstname);
+    console.log(otherObject.lastname);
+
+    var Person = {
+        firstName: "",
+        lastName: "",
+        fullName: function() {
+            return "Fullname is: " + this.firstName + " " + this.lastName;
+        }
+    }
+
+    var me = Object.create(Person);
+    var someElse = Object.create(Person);
+
+    me.firstName = "Eugene";
+    me.lastName = "Pavlyuk";
+
+    someElse.firstName = "First name";
+    someElse.lastName = "Last name";
+
+    console.log(me.fullName());
+    console.log(Person.fullName());
+    console.log(someElse.fullName());
+
+    console.log(typeof me);
+    console.log(me.prototype);
+    
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
